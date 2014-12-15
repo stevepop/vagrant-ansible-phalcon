@@ -1,0 +1,14 @@
+---
+- name: install required packages
+  apt: pkg={{ item }} state=latest force=yes update_cache=yes
+  with_items:
+    - php5-mysql
+
+- name: checkout phpmyadmin repository
+  git: repo=https://github.com/phpmyadmin/phpmyadmin.git dest=/var/www/phpmyadmin
+
+- name: copy config.sample.inc.php
+  copy: src=/var/www/phpmyadmin/config.sample.inc.php dest=/var/www/phpmyadmin/config.inc.php owner=www-data group=www-data mode=0644
+
+- name: change owner to www-data
+  file: path=/var/www/phpmyadmin owner=www-data group=www-data state=directory recurse=yes
