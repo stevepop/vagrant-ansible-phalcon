@@ -18,10 +18,10 @@ end
 Vagrant.configure("2") do |config|
 
     config.vm.provider :virtualbox do |v|
-        v.name = "CafeFrame"
+        v.name = "Vagrant"
         v.customize [
             "modifyvm", :id,
-            "--name", "CafeFrame",
+            "--name", "Vagrant",
             "--memory", 2048,
             "--natdnshostresolver1", "on",
             "--cpus", 2,
@@ -45,7 +45,7 @@ Vagrant.configure("2") do |config|
             ansible.limit = 'all'
             ansible.extra_vars = {
                 private_interface: "192.168.1.47",
-                hostname: "CafeFrame"
+                hostname: "Vagrant"
             }
         end
     else
