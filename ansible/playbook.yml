@@ -5,6 +5,7 @@
     web_server: apachephp
     servername: vagrant
     timezone: Europe/Copenhagen
+    phalcon_version: master
   vars_files:
     - vars/mysql.yml
     - vars/common.yml

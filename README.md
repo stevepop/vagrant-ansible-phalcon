@@ -29,6 +29,7 @@ By default i have set this to use 2048MB ram and 2 cores. You can change this in
   - MySQL 5.6
 - Git
 - [Phalcon](http://phalconphp.com/en/)
+- Phpmyadmin (From github, so newest is fetched)
 - [Composer](https://getcomposer.org)
 
 ## Requirements
