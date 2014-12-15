@@ -101,3 +101,4 @@ I want to say thank you to some sites and repos where i got this made from
   - Borrowed some text from [Phalcon-Vagrant](https://github.com/phalcon/vagrant) with some changes.
   - [Phansible](http://phansible.com/) For the base of this repo
   - [Ansible](http://www.ansible.com/) For making a great and easy readable system.
+  - [Ansible-Playbooks](https://github.com/loranger/ansible-playbooks) for providing many roles to Ansible.
