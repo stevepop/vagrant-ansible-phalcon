@@ -20,7 +20,7 @@ I use the default Ubuntu Trusty 64Bit (14.04) from Vagrant
 When you provision Vagrant for the first time it's always the longest procedure (`$ vagrant up`). Vagrant will download the entire Linux OS if you never used Vagrant on the project.
 By default i have set this to use 2048MB ram and 2 cores. You can change this in `Vagrantfile` and simply run `$ vagrant reload`.
 
-## Pacages Included
+## Packages Included
 
 - Lamp Stac
   - Ubuntu Trusty 64 Bit (14.04)
@@ -78,3 +78,11 @@ If you are using Linux you can use the built in Terminal to do everything.
 The same goes with OSX.
 
 For Windows, you can use [Git SCM](http://git-scm.com/) and Bash, [Sourcetree](http://www.sourcetreeapp.com/)
+
+## Thank You
+
+I want to say thank you to some sites and repos where i got this made from
+
+  - Borrowed some text from [Phalcon-Vagrant](https://github.com/phalcon/vagrant) with some changes.
+  - [Phansible](http://phansible.com/) For the base of this repo
+  - [Ansible](http://www.ansible.com/) For making a great and easy readable system.
