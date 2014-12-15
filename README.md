@@ -22,7 +22,7 @@ By default i have set this to use 2048MB ram and 2 cores. You can change this in
 
 ## Packages Included
 
-- Lamp Stac
+- Lamp Stack
   - Ubuntu Trusty 64 Bit (14.04)
   - Apache 2.4
   - PHP 5.6
@@ -66,6 +66,21 @@ realtime changes in the Virtual Machine.
 
 If you are using .git you should initialize your repository locally rather than on the server.
 This way you will not have to import keys into your Virtual Machine.
+
+I would recommend you to update follow settings in `Vagrantfile`
+
+`v.name = "Vagrant"`
+
+`"--name", "Vagrant",`
+
+`config.vm.network "public_network", ip: "192.168.1.47"`
+
+`private_interface: "192.168.1.47",`
+
+`hostname: "Vagrant"`
+
+I use 192.168.1.47 to my machine.
+I do not map any webserver to my host but instead adding a host to my host file: C:/Windows/System32/drivers/etc/hosts (or /etc/hosts on OS X, Linux)
 
 ## Using SSH
 
