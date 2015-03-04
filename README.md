@@ -83,6 +83,19 @@ I would recommend you to update follow settings in `Vagrantfile`
 I use 192.168.1.47 to my machine.
 I do not map any webserver to my host but instead adding a host to my host file: C:/Windows/System32/drivers/etc/hosts (or /etc/hosts on OS X, Linux)
 
+To change between Phalcon 1.3.5 and Phalcon2.
+Edit the file `ansible/playbook.yml`
+At the bottom you see
+
+`- php-phalcon` 
+
+This will be for version 1.3.5
+Change it to:
+
+`- php-phalcon2`
+
+To get Phalcon 2
+
 ## Using SSH
 
 Files in the shared directory of `your project root` are by default given ownership of `www-data:www-data` so

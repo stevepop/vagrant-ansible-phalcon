@@ -1,29 +1,14 @@
 ---
-- name: check phalcon version
-  shell: php -i | grep Phalcon
-  register: current_phalcon_extension
-  ignore_errors: True
-
-- name: install required packages
-  apt: pkg={{ item }} state=latest force=yes update_cache=yes
-  with_items:
-    - php5-dev
-    - php5-mysql
-    - gcc
-
 - name: checkout phalcon repository
-  git: repo=https://github.com/phalcon/cphalcon.git dest=/tmp/phalcon
-  when: "'enabled' not in '{{ current_phalcon_extension.stdout }}'"
+  git: repo=https://github.com/phalcon/cphalcon.git version=1.3.5 dest=/tmp/cphalcon
 
 - name: build phalcon
-  action: command {{ item }} chdir=/tmp/phalcon/build
+  action: command {{ item }} chdir=/tmp/cphalcon/build
   with_items:
     - ./install
-  when: "'enabled' not in '{{ current_phalcon_extension.stdout }}'"
 
 - name: copy phalcon.ini
   copy: src=phalcon.ini dest=/etc/php5/mods-available/phalcon.ini owner=root group=root mode=0644
-  when: "'enabled' not in '{{ current_phalcon_extension.stdout }}'"
 
 - name: enable phalcon
   action: command {{ item }}
